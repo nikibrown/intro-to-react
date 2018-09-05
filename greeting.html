@@ -18,9 +18,28 @@
                     );
                 }
             }
+
+            class Button extends React.Component {
+
+                handleClick() {
+                    console.log("Button was clicked!");
+                }
+                render() {
+                    return (
+                        <button onClick={(e) => this.handleClick(e)}>
+                            Click me baby one more time
+                        </button>
+                    );
+                }
+            }
+
             ReactDOM.render(
-                <Greeting />, document.getElementById('app')
+                // so react wants jsx elements wrapped in one enclosing tag so arbitrary div! #facepalm
+                <div><Greeting /><Button /></div>, document.getElementById('app')
             );
+
+
+
         </script>
     </body>
 </html>
