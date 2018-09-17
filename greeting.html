@@ -13,7 +13,7 @@
                 render() {
                     return (
                         <div className="oh-hey-look-a-css-class">
-                        <h1>Здравствуйте World!</h1>
+                        <h1>Здравствуйте {this.props.name}!</h1>
                         </div>
                     );
                 }
@@ -34,8 +34,7 @@
             }
 
             ReactDOM.render(
-                // so react wants jsx elements wrapped in one enclosing tag so arbitrary div! #facepalm
-                <div><Greeting /><Button /></div>, document.getElementById('app')
+                <div><Greeting name="Niki Brown" /><Button /></div>, document.getElementById('app')
             );
 
 
